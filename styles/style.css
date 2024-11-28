@@ -129,7 +129,7 @@ ol {
   flex-direction: row;
   justify-content: flex-start;
   gap: 16px;
-  width: 100%;
+  width: 213px;
   padding-bottom: 5px;
 }
 
@@ -217,7 +217,7 @@ ol {
 }
 
 .search-form__submit-button {
-  width: 100%;
+  width: 194px;
 }
 
 .search-form__label:has(:hover) > .search-form__label-text {
