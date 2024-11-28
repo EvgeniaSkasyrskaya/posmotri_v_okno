@@ -9,8 +9,8 @@ html {
 }
 
 .page {
+  display: flex;
   margin: auto;
-  padding: 133px 30px;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -51,11 +51,12 @@ ol {
 .content {
   display: flex;
   flex-direction: row;
+  justify-self: center;
   justify-content: space-between;
   align-items: flex-end;
+  align-self: center;
   width: 1140px;
   height: 534px;
-  margin: auto;
 }
 
 .result {
@@ -144,29 +145,21 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
-  display: block;
+  display: flex;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
+  padding: 1px;
   background-color: transparent;
 }
 
-.search-form__pseudo-checkbox:active::after {
-  content: ' ';
-  position: absolute;
-  inset: 1px;
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-}
-
+.search-form__pseudo-checkbox:active::after, 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after  {
-  content: ' ';
-  position: absolute;
-  inset: 1px;
+  content: '';
   width: 15px;
   height: 15px;
+  margin-inline: auto;
+  margin-block: auto;
   background-color: #fff;
 }
 
