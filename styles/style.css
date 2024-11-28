@@ -10,7 +10,7 @@ html {
 
 .page {
   display: flex;
-  margin: auto;
+  margin-inline: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -51,10 +51,10 @@ ol {
 .content {
   display: flex;
   flex-direction: row;
-  justify-self: center;
   justify-content: space-between;
   align-items: flex-end;
   align-self: center;
+  margin-inline: auto;
   width: 1140px;
   height: 534px;
 }
