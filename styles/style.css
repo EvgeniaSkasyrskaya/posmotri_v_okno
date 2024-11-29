@@ -57,7 +57,6 @@ ol {
   align-items: flex-end;
   align-self: center;
   width: 1140px;
-  height: 534px;
   margin-inline: auto;
 }
 
@@ -79,6 +78,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -227,9 +227,10 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 22px;
   width: 400px;
-  height: 100%;
+  padding-top: 3px;
 }
 
 .title {
@@ -250,16 +251,21 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 100%;
+  width: 410px;
   height: 300px;
-  overflow: auto;
-  scrollbar-width: none;
+  overflow: auto; 
+  /* Это вертикальный скролл (по оси Y). Так как в макете скроллбар не изображен, то в первой версии я его сделала невидимым через
+  scrollbar-width: none. Горизонтального скролла в первой версии не было, и я его не скрывала через overflow:hidden.*/
+  scrollbar-width: thin;
 }
 
 .content__list-item {
   width: 100%;
   height: 107px;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .content__card-link {
@@ -274,6 +280,7 @@ ol {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
+  width: 100%;
   height: 100%;
 }
 
@@ -281,8 +288,8 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 2px;
-  padding-top: 3px;
+  gap: 3px;
+  padding-top: 1px;
 }
 
 .content__video-card:hover > .content__video-card-description-container {
@@ -304,28 +311,37 @@ ol {
 }
 
 .content__video-card-title {
+  max-width: 192px;
   overflow: hidden;
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
   font-size: 30px;
   line-height: 110%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
+  max-width: 192px;
+  max-height: 65px;
+  overflow: hidden;
   font-weight: normal;
   line-height: 90%;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 .content__video-card-thumbnail {
-  align-self: center;
+  align-self: flex-start;
   width: 194px;
-  height: 107px;
+  height: 103px;
   object-fit: cover;
+  object-position: center;
 }
 
 .more-button {
- width: 396px;
+ width: 395px;
  margin: 2px;
 } 
 
